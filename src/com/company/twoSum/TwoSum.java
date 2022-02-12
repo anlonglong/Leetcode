@@ -1,6 +1,8 @@
 package com.company.twoSum;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TwoSum {
 
@@ -22,6 +24,17 @@ public class TwoSum {
             }
         }
         return index;
+    }
+
+    public static int[] twoSum2(int[] numbs, int target){
+        Map<Integer, Integer> hm = new HashMap<>();
+        for (int i = 0; i < numbs.length; i++) {
+            if (hm.containsKey(target - numbs[i])) {
+                return new int[]{hm.get(target - numbs[i]),i};
+            }
+            hm.put(numbs[i], i);
+        }
+        return new int[]{0};
     }
 
 }
