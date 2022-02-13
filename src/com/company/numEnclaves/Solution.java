@@ -1,4 +1,4 @@
-package com.company;
+package com.company.numEnclaves;
 
 public class Solution {
 
